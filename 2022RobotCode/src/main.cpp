@@ -1,4 +1,6 @@
-//Upload from file directory with normal terminal using 'prosv5 mu --slot n'
+//Upload from file directory with normal terminal using 'prosv5 mu --slot n', the slots are not working for me yet
+//Look into this https://github.com/purduesigbots/JINX for realtime data vis. This could help with tuning PIDs a lot.
+//TODO: Wireless uploads, general sensor testing, experiment with multitasking, setting up vision, monitor batteries and currents
 #include <string>
 #include "main.h"
 #include "okapi/api.hpp"
@@ -41,6 +43,7 @@ void opcontrol() {
 		{
 			chassis->setState(OdomState{0_m, 0_m, 0_deg});
 		}
+		
 		pros::delay(20);
 	}
 	//drive->moveDistance(12_in);
